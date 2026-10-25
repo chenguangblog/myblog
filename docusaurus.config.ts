@@ -11,14 +11,13 @@ const config: Config = {
     experimental_faster: true,
   },
   title: '星光',
-  tagline: '一个前端',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://www.xingguang.host',
+  url: 'https://starguang.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/myblog/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
