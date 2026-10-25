@@ -15,8 +15,6 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">
           {siteConfig.tagline}
-          <br></br>
-          但我的女朋友很不一般
         </p>
         <div className={styles.buttons}>
           <Link
