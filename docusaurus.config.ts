@@ -1,6 +1,6 @@
-import { themes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
@@ -8,43 +8,46 @@ const darkTheme = themes.dracula;
 const config: Config = {
   future: {
     v4: true,
-    experimental_faster: true,
+    faster: true,
   },
-  title: '星光',
-  favicon: 'img/favicon.ico',
+  title: "星光",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://starguang.github.io/',
+  url: "https://starguang.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/myblog/',
+  baseUrl: "/myblog/",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
+  onBrokenLinks: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  projectName: 'xingguang的博客', // Usually your repo name.
+  projectName: "xingguang的博客", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-cn',
-    locales: ['zh-cn'],
+    defaultLocale: "zh-cn",
+    locales: ["zh-cn"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -52,23 +55,23 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: '首页',
+      title: "首页",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "My Site Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: '文档',
-          editUrl: 'https://www.baidu.com'
+          type: "doc",
+          docId: "intro",
+          position: "left",
+          label: "文档",
+          editUrl: "https://www.baidu.com",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} 星光`,
     },
     prism: {
@@ -76,13 +79,13 @@ const config: Config = {
       darkTheme: darkTheme,
     },
     giscus: {
-      repo: 'starguang/myblog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkyNzIxNzg4MDE=',
-      category: 'Announcement',
-      categoryId: 'DIC_kwDOEDkecc4CSlJj',
-      dataLang: "zh-CN"
+      repo: "starguang/myblog",
+      repoId: "MDEwOlJlcG9zaXRvcnkyNzIxNzg4MDE=",
+      category: "Announcement",
+      categoryId: "DIC_kwDOEDkecc4CSlJj",
+      dataLang: "zh-CN",
     },
-    metadata: [{ name: 'xingguang博客', content: 'blog, react, 前端, ndoejs' }],
+    metadata: [{ name: "xingguang博客", content: "blog, react, 前端, ndoejs" }],
   } satisfies Preset.ThemeConfig,
 };
 
